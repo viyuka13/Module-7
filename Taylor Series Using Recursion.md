@@ -15,9 +15,19 @@ To write a Python program to evaluate a **Taylor Series** using **recursion**, w
 6. **Stop**
 
 ## 💻 PROGRAM:
-
-ADD CODE HERE
+      def series(x, n):
+          if n == 0:
+              return 1
+          else:
+              return x**n / n + series(x, n - 1)
+      
+      x = float(input("Enter the value of x: "))
+      n = int(input("Enter the value of n: "))
+      result = series(x, n)
+      print("Result of the series:", result)
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/68657727-ca0c-441f-9908-3b9ff321f9d0)
 
 ## RESULT
+The program demonstrates the use of recursion to compute the value of the series xⁿ/n + xⁿ⁻¹/(n-1) + ... + x¹/1 + 1 and prints the result accordingly.
