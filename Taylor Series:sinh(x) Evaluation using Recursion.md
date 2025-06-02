@@ -22,9 +22,25 @@ To write a Python program to evaluate the value of **sinh(x)** for **n terms** u
 ---
 
 ## 💻 PROGRAM:
-
-ADD CODE HERE
+      def fact(n):
+          if n <= 1:
+              return 1
+          else:
+              return n * fact(n - 1)
+      
+      def sinh(x, n):
+          if n == 0:
+              return x
+          else:
+              return (pow(x, 2*n + 1) / fact(2*n + 1)) + sinh(x, n - 1)
+      
+      x = float(input("Enter the value of x: "))
+      n = int(input("Enter the number of terms: "))
+      result = sinh(x, n)
+      print("sinh(x) approximation using series:", result)
 
 ## OUTPUT
+![image](https://github.com/user-attachments/assets/389159d8-22d1-4b11-ab74-a654bc1f4721)
 
 ## RESULT
+The program demonstrates the use of recursion to approximate the value of the hyperbolic sine function sinh(x) using its Taylor series expansion and prints the result accordingly.
